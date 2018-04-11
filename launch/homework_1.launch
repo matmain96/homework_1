@@ -1,0 +1,10 @@
+<launch>
+    <node name="publisher" pkg="homework_1" type="publisher" 
+            output="screen" launch-prefix="gnome-terminal -x" />
+
+    <node name="half" pkg="homework_1" type="half" 
+            output="screen" launch-prefix="gnome-terminal -x" /> 
+
+    <node name="last" pkg="homework_1" type="last" 
+            output="screen" launch-prefix="gnome-terminal -x" />
+</launch>
