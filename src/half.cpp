@@ -39,29 +39,30 @@ char getch()
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "half");
+  ros::init(argc, argv, "half"); //init del programma
   ros::NodeHandle a;
-  ros::Publisher info = a.advertise<homework_1::Comando>("information", 1000);
-  ros::Rate loop_rate(1);
+  ros::Publisher info = a.advertise<homework_1::Comando>("information", 1000); //creo il topic inerente a quale comando inviare
+  ros::Rate loop_rate(1); //come da richiesta pongo il rate a 1 secondo
   cout << "MENU:\n -a: visualizza l'intero messaggio \n -e: visualizza l'età del soggetto\n -n: visualizza il nome del soggetto\n -c: visualizza il corso di laurea del soggetto\n";
-  char comando='a';
-  char svalue=comando;
+  //visualizzazione menù
+  char comando='a'; //comando di visualizzazione di default
+  char svalue=comando; // char per il controllo del corretto inserimento
   while (ros::ok())
   {
     homework_1::Comando msg;
-    char comando=getch();
+    char comando=getch(); //inserimento
     if(comando != 'a' && comando != 'n' && comando != 'c' && comando != 'e' && comando != 'E'  && comando != 'C' && comando != 'N' && comando != 'A' ){
-      comando=svalue;
+      comando=svalue; //se non vengono rispettati i canoni indicati allora non c'è nessun cambio del comando
     }
-    else {
+    else { //aggiornamento comando e variabile di supporto
       cout << "\n  E' stato premuto il tasto " << comando << "!\n controlla le nuove informazioni! \n" ;
-      svalue=comando;
+      svalue=comando; 
     }
-    msg.comando = comando;
+    msg.comando = comando; //modifichiamo msg 
   //  ROS_INFO("\n invio il comando [%c]\n ", msg.comando);
-    info.publish(msg);
+    info.publish(msg); //invio il comando
     ros::spinOnce();
-    loop_rate.sleep();
+    loop_rate.sleep(); 
   }
   return 0;
 }
