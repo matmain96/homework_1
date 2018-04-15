@@ -43,7 +43,7 @@ int main(int argc, char **argv)
   ros::NodeHandle a;
   ros::Publisher info = a.advertise<homework_1::Comando>("information", 1000);
   ros::Rate loop_rate(1);
-  cout << "MENU:\n -a: visualizza l'intero messaggio \n -e: visualizza l'età del soggetto\n -n: visualizza il nome del soggetto\n -c: visualizza il corso di laurea del soggetto\n  COMANDO ATTUALE: a";
+  cout << "MENU:\n -a: visualizza l'intero messaggio \n -e: visualizza l'età del soggetto\n -n: visualizza il nome del soggetto\n -c: visualizza il corso di laurea del soggetto\n";
   char comando='a';
   char svalue=comando;
   while (ros::ok())
