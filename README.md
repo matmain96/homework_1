@@ -27,6 +27,7 @@ $rosrun homework_1 last
 
 nell'immagine di seguito, in ordine di lettura vediamo Publisher, roscore, Half e Last, da cui possiamo vedere il menù iniziale di Half e la richiesta del nome da parte di Publisher.
 
+![alt text](images/four.png "Description goes here")
 
 ## Funzionamento
 
@@ -35,11 +36,15 @@ Per eseguire il programma bisogna inserire le proprie credenziali all'interno de
 Inizialmente il nodo Last pubblicherà a schermo tutta la stringa, siccome inizialmente il comando predefinito è 'a'. 
 
 
-Successivamente Half mostrerà a schermo un'eventuale modifica del comando, che andrà a modificare l'output di Last.
+![alt text](images/ftwo.png "Publisher sending information")
 
+Successivamente Half mostrerà a schermo un'eventuale modifica del comando, che andrà a modificare l'output di Last.
+![alt text](images/stwo.png "Changing output")
 
 
 ## Grafico 
+
+![alt text](images/rosgraph.png "rqt")
 
 ## Implementazione
 
