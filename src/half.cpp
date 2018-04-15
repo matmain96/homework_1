@@ -1,11 +1,8 @@
 
  
 #include "ros/ros.h"
-#include "std_msgs/String.h"
-#include <sstream>
 #include <iostream>
 #include <string>
-#include <boost/thread/thread.hpp>
 #include <termios.h>
 #include "homework_1/Comando.h"
 
